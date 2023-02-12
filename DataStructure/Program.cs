@@ -10,10 +10,15 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            LinkedList<int> ll=new LinkedList<int>();
-            ll.AddLast(30);
-            ll.AddLast(20);
-            ll.AddFirst(10);
+            //LinkedList<int> ll = new LinkedList<int>();
+            //ll.AddLast(30);
+            //ll.AddLast(20);
+            //ll.AddFirst(10);
+            CustomLinkedList linkedList= new CustomLinkedList();
+            linkedList.AddLast(56);
+            linkedList.AddLast(30);
+            linkedList.AddLast(70);
+            Console.ReadLine();
 
         }
     }
