@@ -15,7 +15,7 @@ namespace DataStructure
             if (head == null)
             {
                 head = newNode;
-                Console.WriteLine("{0} is inserted into Linkedlist",newNode.data);
+                //Console.WriteLine("{0} is inserted into Linkedlist",newNode.data);
             }
             else 
             {
@@ -25,7 +25,31 @@ namespace DataStructure
                     temp = temp.next;
                 }
                 temp.next = newNode;
-                Console.WriteLine("{0} is inserted into Linkedlist", newNode.data);
+                //Console.WriteLine("{0} is inserted into Linkedlist", newNode.data);
+            }
+        }
+        public void AddFirst(int data) 
+        {
+            Node newNode = new Node(data);
+            newNode.next=head;
+            head = newNode;
+            Console.WriteLine("{0} node inserted into linkedlist",newNode.data);
+        }
+        public void Display() 
+        {
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            else 
+            {
+                Console.WriteLine("Displaying nodes");
+                Node temp=head;
+                while (temp!=null)
+                {
+                    Console.Write(temp.data + " ");
+                    temp= temp.next;
+                }
             }
 
         }

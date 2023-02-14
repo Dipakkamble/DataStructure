@@ -10,16 +10,30 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter the option below:");
+            Console.WriteLine("\n1:create linkedlist using addlast\n2:create linkedlist using addfirst");
+            int option = Convert.ToInt32(Console.ReadLine());
             //LinkedList<int> ll = new LinkedList<int>();
             //ll.AddLast(30);
             //ll.AddLast(20);
             //ll.AddFirst(10);
-            CustomLinkedList linkedList= new CustomLinkedList();
-            linkedList.AddLast(56);
-            linkedList.AddLast(30);
-            linkedList.AddLast(70);
+            CustomLinkedList linkedList = new CustomLinkedList();
+            switch (option)
+            {
+                case 1:
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    break;
+                case 2:
+                    linkedList.AddFirst(70);
+                    linkedList.AddFirst(30);
+                    linkedList.AddFirst(56);
+                    linkedList.Display();
+                    break;
+            }
             Console.ReadLine();
-
         }
     }
 }
