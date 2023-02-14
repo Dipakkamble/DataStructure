@@ -52,6 +52,30 @@ namespace DataStructure
                 head = head.next;
             }
         }
+        public void RemoveLast() 
+        {
+            Node temp=head;
+            if (temp==null)
+                Console.WriteLine("Linked list is empty please add nodes");
+            else if (temp.next == null)
+            {
+                int data = temp.data;
+                temp = null;
+                //return data
+                Console.WriteLine("{0} node is deleted", data);
+            }
+            else 
+            {
+                //second node not equal to null
+                while (temp.next.next != null) 
+                {
+                    temp = temp.next;
+                }
+                int lastDeleteNode=temp.next.data;
+                temp.next = null;
+                Console.WriteLine("{0} node is deleted",lastDeleteNode);
+            }
+        }
         public void Display() 
         {
             if (head == null)
