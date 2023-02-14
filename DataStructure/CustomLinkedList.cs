@@ -40,6 +40,18 @@ namespace DataStructure
         {
             AddLast(data);
         }
+        public void RemoveFirst() 
+        {
+            if (head == null)
+            {
+                Console.WriteLine("It's empty please add nodes");
+            }
+            else 
+            {
+                Console.WriteLine("{0} is removed", head.data);
+                head = head.next;
+            }
+        }
         public void Display() 
         {
             if (head == null)
