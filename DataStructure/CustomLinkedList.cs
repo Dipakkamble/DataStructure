@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace DataStructure
             if (head == null)
             {
                 head = newNode;
-                //Console.WriteLine("{0} is inserted into Linkedlist",newNode.data);
+                Console.WriteLine("{0} is inserted into Linkedlist",newNode.data);
             }
             else 
             {
@@ -25,7 +26,7 @@ namespace DataStructure
                     temp = temp.next;
                 }
                 temp.next = newNode;
-                //Console.WriteLine("{0} is inserted into Linkedlist", newNode.data);
+                Console.WriteLine("{0} is inserted into Linkedlist", newNode.data);
             }
         }
         public void AddFirst(int data) 
@@ -34,6 +35,10 @@ namespace DataStructure
             newNode.next=head;
             head = newNode;
             Console.WriteLine("{0} node inserted into linkedlist",newNode.data);
+        }
+        public void Append(int data) 
+        {
+            AddLast(data);
         }
         public void Display() 
         {

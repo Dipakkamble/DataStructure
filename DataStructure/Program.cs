@@ -11,7 +11,7 @@ namespace DataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the option below:");
-            Console.WriteLine("\n1:create linkedlist using addlast\n2:create linkedlist using addfirst");
+            Console.WriteLine("\n1:create linkedlist using addlast\n2:create linkedlist using addfirst\n3:create linkedlist using append");
             int option = Convert.ToInt32(Console.ReadLine());
             //LinkedList<int> ll = new LinkedList<int>();
             //ll.AddLast(30);
@@ -30,6 +30,12 @@ namespace DataStructure
                     linkedList.AddFirst(70);
                     linkedList.AddFirst(30);
                     linkedList.AddFirst(56);
+                    linkedList.Display();
+                    break;
+                case 3:
+                    linkedList.Append(56);
+                    linkedList.Append(30);
+                    linkedList.Append(70);
                     linkedList.Display();
                     break;
             }
